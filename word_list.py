@@ -1,7 +1,7 @@
 import json
 from typing import Dict, Union, List
 
-WEAKER_WORDS_STR = "weaker words"
+STRONGER_WORDS_STR = "stronger words"
 
 class WordList:
     """
@@ -15,12 +15,12 @@ class WordList:
         self.word_list = {
             1: {"text": "Feather", "cost": 1},
             2: {"text": "Coal", "cost": 1},
-            3: {"text": "Pebble", "cost": 1},
+            3: {"text": "Pebble", "cost": 1},   # Pietricele
             4: {"text": "Leaf", "cost": 2},
             5: {"text": "Paper", "cost": 2},
             6: {"text": "Rock", "cost": 2},
             7: {"text": "Water", "cost": 3},
-            8: {"text": "Twig", "cost": 3},
+            8: {"text": "Twig", "cost": 3},      # Ramura mica
             9: {"text": "Sword", "cost": 4},
             10: {"text": "Shield", "cost": 4},
             11: {"text": "Gun", "cost": 5},
@@ -76,66 +76,327 @@ class WordList:
         }
 
         # Hard-coded, it is what it is
-        self.word_list[1][WEAKER_WORDS_STR]  = [2, 3]  # Feather bate Coal și Pebble
-        self.word_list[2][WEAKER_WORDS_STR]  = [3]     # Coal bate Pebble
-        self.word_list[3][WEAKER_WORDS_STR]  = [4]     # Pebble bate Leaf
-        self.word_list[4][WEAKER_WORDS_STR]  = [5, 6]  # Leaf bate Paper și Rock
-        self.word_list[5][WEAKER_WORDS_STR]  = [6]     # Paper bate Rock
-        self.word_list[6][WEAKER_WORDS_STR]  = [7, 8]  # Rock bate Water și Twig
-        self.word_list[7][WEAKER_WORDS_STR]  = [8]     # Water bate Twig
-        self.word_list[8][WEAKER_WORDS_STR]  = [9, 10] # Twig bate Sword și Shield
-        self.word_list[9][WEAKER_WORDS_STR]  = [11]    # Sword bate Gun
-        self.word_list[10][WEAKER_WORDS_STR] = [11, 12] # Shield bate Gun și Flame
-        self.word_list[11][WEAKER_WORDS_STR] = [13]   # Gun bate Rope
-        self.word_list[12][WEAKER_WORDS_STR] = [13]   # Flame bate Rope
-        self.word_list[13][WEAKER_WORDS_STR] = [14]   # Rope bate Disease
-        self.word_list[14][WEAKER_WORDS_STR] = [15]   # Disease bate Cure
-        self.word_list[15][WEAKER_WORDS_STR] = [16]   # Cure bate Bacteria
-        self.word_list[16][WEAKER_WORDS_STR] = [17]   # Bacteria bate Shadow
-        self.word_list[17][WEAKER_WORDS_STR] = [18]   # Shadow bate Light
-        self.word_list[18][WEAKER_WORDS_STR] = [19]   # Light bate Virus
-        self.word_list[19][WEAKER_WORDS_STR] = [20]   # Virus bate Sound
-        self.word_list[20][WEAKER_WORDS_STR] = [21]   # Sound bate Time
-        self.word_list[21][WEAKER_WORDS_STR] = [22]   # Time bate Fate
-        self.word_list[22][WEAKER_WORDS_STR] = [23]   # Fate bate Earthquake
-        self.word_list[23][WEAKER_WORDS_STR] = [24]   # Earthquake bate Storm
-        self.word_list[24][WEAKER_WORDS_STR] = [25]   # Storm bate Vaccine
-        self.word_list[25][WEAKER_WORDS_STR] = [26]   # Vaccine bate Logic
-        self.word_list[26][WEAKER_WORDS_STR] = [27]   # Logic bate Gravity
-        self.word_list[27][WEAKER_WORDS_STR] = [28]   # Gravity bate Robots
-        self.word_list[28][WEAKER_WORDS_STR] = [29]   # Robots bate Stone
-        self.word_list[29][WEAKER_WORDS_STR] = [30]   # Stone bate Echo
-        self.word_list[30][WEAKER_WORDS_STR] = [31]   # Echo bate Thunder
-        self.word_list[31][WEAKER_WORDS_STR] = [32]   # Thunder bate Karma
-        self.word_list[32][WEAKER_WORDS_STR] = [33]   # Karma bate Wind
-        self.word_list[33][WEAKER_WORDS_STR] = [34]   # Wind bate Ice
-        self.word_list[34][WEAKER_WORDS_STR] = [35]   # Ice bate Sandstorm
-        self.word_list[35][WEAKER_WORDS_STR] = [36]   # Sandstorm bate Laser
-        self.word_list[36][WEAKER_WORDS_STR] = [37]   # Laser bate Magma
-        self.word_list[37][WEAKER_WORDS_STR] = [38]   # Magma bate Peace
-        self.word_list[38][WEAKER_WORDS_STR] = [39]   # Peace bate WAr
-        self.word_list[39][WEAKER_WORDS_STR] = [40]   # Explosion bate War
-        self.word_list[40][WEAKER_WORDS_STR] = [41]   # War bate Enlightenment
-        self.word_list[41][WEAKER_WORDS_STR] = [42]   # Enlightenment bate Nuclear Bomb
-        self.word_list[42][WEAKER_WORDS_STR] = [43]   # Nuclear Bomb bate Volcano
-        self.word_list[43][WEAKER_WORDS_STR] = [44]   # Volcano bate Whale
-        self.word_list[44][WEAKER_WORDS_STR] = [45]   # Whale bate Earth
-        self.word_list[45][WEAKER_WORDS_STR] = [46]   # Earth bate Moon
-        self.word_list[46][WEAKER_WORDS_STR] = [47]   # Moon bate Star
-        self.word_list[47][WEAKER_WORDS_STR] = [48]   # Star bate Tsunami
-        self.word_list[48][WEAKER_WORDS_STR] = [49]   # Tsunami bate Supernova
-        self.word_list[49][WEAKER_WORDS_STR] = [50]   # Supernova bate Antimatter
-        self.word_list[50][WEAKER_WORDS_STR] = [51]   # Antimatter bate Plague
-        self.word_list[51][WEAKER_WORDS_STR] = [52]   # Plague bate Rebirth
-        self.word_list[52][WEAKER_WORDS_STR] = [53]   # Rebirth bate Tectonic Shift
-        self.word_list[53][WEAKER_WORDS_STR] = [54]   # Tectonic Shift bate Gamma-Ray Burst
-        self.word_list[54][WEAKER_WORDS_STR] = [55]   # Gamma-Ray Burst bate Human Spirit
-        self.word_list[55][WEAKER_WORDS_STR] = [56]   # Human Spirit bate Apocalyptic Meteor
-        self.word_list[56][WEAKER_WORDS_STR] = [57]   # Apocalyptic Meteor bate Earth’s Core
-        self.word_list[57][WEAKER_WORDS_STR] = [58]   # Earth’s Core bate Neutron Star
-        self.word_list[58][WEAKER_WORDS_STR] = [59]   # Neutron Star bate Supermassive Black Hole
-        self.word_list[59][WEAKER_WORDS_STR] = [60]   # Supermassive Black Hole bate Entropy
-        self.word_list[60][WEAKER_WORDS_STR] = []     # Entropy nu bate niciun alt cuvânt
+        self.word_list[1][STRONGER_WORDS_STR]  = [
+            # "Feather" is weaker than:
+            self.get_word_id("Rock"),
+            self.get_word_id("Sword"),
+            self.get_word_id("Gun"),
+            self.get_word_id("Flame")
+        ]
+        self.word_list[2][STRONGER_WORDS_STR]  = [
+            # "Coal" is weaker than:
+            self.get_word_id("Rock"),
+            self.get_word_id("Sword"),
+            self.get_word_id("Gun")
+        ]
+        self.word_list[3][STRONGER_WORDS_STR]  = [
+            # "Pebble" is weaker than:
+            self.get_word_id("Rock"),
+            self.get_word_id("Sword"),
+            self.get_word_id("Gun")
+        ]
+        self.word_list[4][STRONGER_WORDS_STR]  = [
+            # "Leaf" is weaker than:
+            self.get_word_id("Rock"),
+            self.get_word_id("Sword"),
+            self.get_word_id("Gun"),
+            self.get_word_id("Flame")
+        ]
+        self.word_list[5][STRONGER_WORDS_STR]  = [
+            # "Paper" is weaker than:
+            self.get_word_id("Rock"),
+            self.get_word_id("Sword"),
+            self.get_word_id("Gun"),
+            self.get_word_id("Flame")
+        ]
+        self.word_list[6][STRONGER_WORDS_STR]  = [
+            # "Rock" is weaker than:
+            self.get_word_id("Sword"),
+            self.get_word_id("Gun"),
+            self.get_word_id("Flame")
+        ]
+        self.word_list[7][STRONGER_WORDS_STR]  = [
+            # "Water" is weaker than:
+            self.get_word_id("Fire"),
+            self.get_word_id("Thunder"),
+            self.get_word_id("Sword")
+        ]
+        self.word_list[8][STRONGER_WORDS_STR]  = [
+            # "Twig" is weaker than:
+            self.get_word_id("Rock"),
+            self.get_word_id("Sword"),
+            self.get_word_id("Gun")
+        ]
+        self.word_list[9][STRONGER_WORDS_STR]  = [
+            # "Sword" is weaker than:
+            self.get_word_id("Gun"),
+            self.get_word_id("Flame"),
+            self.get_word_id("Explosion")
+        ]
+        self.word_list[10][STRONGER_WORDS_STR] = [
+            # "Shield" is weaker than:
+            self.get_word_id("Gun"),
+            self.get_word_id("Explosion"),
+            self.get_word_id("Flame")
+        ]
+        self.word_list[11][STRONGER_WORDS_STR] = [
+            # "Gun" is weaker than:
+            self.get_word_id("Explosion"),
+            self.get_word_id("Flame"),
+            self.get_word_id("Nuclear Bomb")
+        ]
+        self.word_list[12][STRONGER_WORDS_STR] = [
+            # "Flame" is weaker than:
+            self.get_word_id("Explosion"),
+            self.get_word_id("Nuclear Bomb"),
+            self.get_word_id("Volcano")
+        ]
+        self.word_list[13][STRONGER_WORDS_STR] = [
+            # "Rope" is weaker than:
+            self.get_word_id("Gun"),
+            self.get_word_id("Flame")
+        ]
+        self.word_list[14][STRONGER_WORDS_STR] = [
+            # "Disease" is weaker than:
+            self.get_word_id("Cure"),
+            self.get_word_id("Vaccine")
+        ]
+        self.word_list[15][STRONGER_WORDS_STR] = [
+            # "Cure" is weaker than:
+            self.get_word_id("Flame"),
+            self.get_word_id("Explosion"),
+            self.get_word_id("Nuclear Bomb")
+        ]
+        self.word_list[16][STRONGER_WORDS_STR] = [
+            # "Bacteria" is weaker than:
+            self.get_word_id("Flame"),
+            self.get_word_id("Gun"),
+            self.get_word_id("Nuclear Bomb")
+        ]
+        self.word_list[17][STRONGER_WORDS_STR] = [
+            # "Shadow" is weaker than:
+            self.get_word_id("Light"),
+            self.get_word_id("Sun"),
+            self.get_word_id("Flame")
+        ]
+        self.word_list[18][STRONGER_WORDS_STR] = [
+            # "Light" is weaker than:
+            self.get_word_id("Thunder"),
+            self.get_word_id("Explosion")
+        ]
+        self.word_list[19][STRONGER_WORDS_STR] = [
+            # "Virus" is weaker than:
+            self.get_word_id("Cure"),
+            self.get_word_id("Vaccine")
+        ]
+        self.word_list[20][STRONGER_WORDS_STR] = [
+            # "Sound" is weaker than:
+            self.get_word_id("Explosion"),
+            self.get_word_id("Thunder")
+        ]
+        self.word_list[21][STRONGER_WORDS_STR] = [
+            # "Time" is weaker than:
+            self.get_word_id("Gravity"),
+            self.get_word_id("Logic")
+        ]
+        self.word_list[22][STRONGER_WORDS_STR] = [
+            # "Fate" is weaker than:
+            self.get_word_id("Time"),
+            self.get_word_id("Logic")
+        ]
+        self.word_list[23][STRONGER_WORDS_STR] = [
+            # "Earthquake" is weaker than:
+            self.get_word_id("Explosion"),
+            self.get_word_id("Nuclear Bomb")
+        ]
+        self.word_list[24][STRONGER_WORDS_STR] = [
+            # "Storm" is weaker than:
+            self.get_word_id("Explosion"),
+            self.get_word_id("Nuclear Bomb")
+        ]
+        self.word_list[25][STRONGER_WORDS_STR] = [
+            # "Vaccine" is weaker than:
+            self.get_word_id("Explosion"),
+            self.get_word_id("Nuclear Bomb")
+        ]
+        self.word_list[26][STRONGER_WORDS_STR] = [
+            # "Logic" is weaker than:
+            self.get_word_id("Time"),
+            self.get_word_id("Fate"),
+            self.get_word_id("Gravity")
+        ]
+        self.word_list[27][STRONGER_WORDS_STR] = [
+            # "Gravity" is weaker than:
+            self.get_word_id("Time"),
+            self.get_word_id("Black Hole")
+        ]
+        self.word_list[28][STRONGER_WORDS_STR] = [
+            # "Robots" are weaker than:
+            self.get_word_id("Humans"),
+            self.get_word_id("AI")
+        ]
+        self.word_list[29][STRONGER_WORDS_STR] = [
+            # "Stone" is weaker than:
+            self.get_word_id("Sword"),
+            self.get_word_id("Gun")
+        ]
+        self.word_list[30][STRONGER_WORDS_STR] = [
+            # "Echo" is weaker than:
+            self.get_word_id("Thunder")
+        ]
+        self.word_list[31][STRONGER_WORDS_STR] = [
+            # "Thunder" is weaker than:
+            self.get_word_id("Explosion"),
+            self.get_word_id("Nuclear Bomb")
+        ]
+        self.word_list[32][STRONGER_WORDS_STR] = [
+            # "Karma" is weaker than:
+            self.get_word_id("Fate"),
+            self.get_word_id("Destiny")
+        ]
+        self.word_list[33][STRONGER_WORDS_STR] = [
+            # "Wind" is weaker than:
+            self.get_word_id("Storm"),
+            self.get_word_id("Tornado")
+        ]
+        self.word_list[34][STRONGER_WORDS_STR] = [
+            # "Ice" is weaker than:
+            self.get_word_id("Flame"),
+            self.get_word_id("Explosion")
+        ]
+        self.word_list[35][STRONGER_WORDS_STR] = [
+            # "Sandstorm" is weaker than:
+            self.get_word_id("Storm"),
+            self.get_word_id("Explosion")
+        ]
+        self.word_list[36][STRONGER_WORDS_STR] = [
+            # "Laser" is weaker than:
+            self.get_word_id("Explosion"),
+            self.get_word_id("Nuclear Bomb")
+        ]
+        self.word_list[37][STRONGER_WORDS_STR] = [
+            # "Magma" is weaker than:
+            self.get_word_id("Volcano"),
+            self.get_word_id("Explosion")
+        ]
+        self.word_list[38][STRONGER_WORDS_STR] = [
+            # "Peace" is weaker than:
+            self.get_word_id("War"),
+            self.get_word_id("Explosion")
+        ]
+        self.word_list[39][STRONGER_WORDS_STR] = [
+            # "Explosion" is weaker than:
+            self.get_word_id("Nuclear Bomb"),
+            self.get_word_id("Supernova")
+        ]
+        self.word_list[40][STRONGER_WORDS_STR] = [
+            # "War" is weaker than:
+            self.get_word_id("Nuclear Bomb"),
+            self.get_word_id("Supernova")
+        ]
+        self.word_list[41][STRONGER_WORDS_STR] = [
+            # "Enlightenment" is weaker than:
+            self.get_word_id("Supernova"),
+            self.get_word_id("Black Hole")
+        ]
+        self.word_list[42][STRONGER_WORDS_STR] = [
+            # "Nuclear Bomb" is weaker than:
+            self.get_word_id("Supernova"),
+            self.get_word_id("Neutron Star")
+        ]
+        self.word_list[43][STRONGER_WORDS_STR] = [
+            # "Volcano" is weaker than:
+            self.get_word_id("Supernova"),
+            self.get_word_id("Neutron Star")
+        ]
+        self.word_list[44][STRONGER_WORDS_STR] = [
+            # "Whale" is weaker than:
+            self.get_word_id("Earthquake"),
+            self.get_word_id("Tsunami")
+        ]
+        self.word_list[45][STRONGER_WORDS_STR] = [
+            # "Earth" is weaker than:
+            self.get_word_id("Supernova"),
+            self.get_word_id("Black Hole")
+        ]
+        self.word_list[46][STRONGER_WORDS_STR] = [
+            # "Moon" is weaker than:
+            self.get_word_id("Neutron Star"),
+            self.get_word_id("Supernova")
+        ]
+        self.word_list[47][STRONGER_WORDS_STR] = [
+            # "Star" is weaker than:
+            self.get_word_id("Neutron Star"),
+            self.get_word_id("Supernova")
+        ]
+        self.word_list[48][STRONGER_WORDS_STR] = [
+            # "Tsunami" is weaker than:
+            self.get_word_id("Supernova"),
+            self.get_word_id("Black Hole")
+        ]
+        self.word_list[49][STRONGER_WORDS_STR] = [
+            # "Supernova" is weaker than:
+            self.get_word_id("Black Hole")
+        ]
+        self.word_list[50][STRONGER_WORDS_STR] = [
+            # "Antimatter" is weaker than:
+            self.get_word_id("Supermassive Black Hole")
+        ]
+        self.word_list[51][STRONGER_WORDS_STR] = [
+            # "Plague" is weaker than:
+            self.get_word_id("Supernova")
+        ]
+        self.word_list[52][STRONGER_WORDS_STR] = [
+            # "Rebirth" is weaker than:
+            self.get_word_id("Supernova")
+        ]
+        self.word_list[53][STRONGER_WORDS_STR] = [
+            # "Tectonic Shift" is weaker than:
+            self.get_word_id("Supernova")
+        ]
+        self.word_list[54][STRONGER_WORDS_STR] = [
+            # "Gamma-Ray Burst" is weaker than:
+            self.get_word_id("Supernova")
+        ]
+        self.word_list[55][STRONGER_WORDS_STR] = [
+            # "Human Spirit" is weaker than:
+            self.get_word_id("Neutron Star")
+        ]
+        self.word_list[56][STRONGER_WORDS_STR] = [
+            # "Apocalyptic Meteor" is weaker than:
+            self.get_word_id("Supernova")
+        ]
+        self.word_list[57][STRONGER_WORDS_STR] = [
+            # "Earth’s Core" is weaker than:
+            self.get_word_id("Neutron Star")
+        ]
+        self.word_list[57][STRONGER_WORDS_STR] = [
+            # "Earth's Core" is weaker than:
+            self.get_word_id("Supernova"),
+            self.get_word_id("Gamma-Ray Burst"),
+            self.get_word_id("Neutron Star")
+        ]
+
+        self.word_list[58][STRONGER_WORDS_STR] = [
+            # "Neutron Star" is weaker than:
+            self.get_word_id("Supernova"),
+            self.get_word_id("Gamma-Ray Burst"),
+            self.get_word_id("Black Hole")
+        ]
+
+        self.word_list[59][STRONGER_WORDS_STR] = [
+            # "Supermassive Black Hole" is weaker than:
+            self.get_word_id("Entropy"),
+            self.get_word_id("Supernova"),
+            self.get_word_id("Neutron Star")
+        ]
+
+        self.word_list[60][STRONGER_WORDS_STR] = [
+            # "Entropy" is weaker than:
+            self.get_word_id("Supermassive Black Hole"),
+            self.get_word_id("Gamma-Ray Burst"),
+            self.get_word_id("Big Bang")
+        ]
 
 
     def get_word_id(self, word: str) -> int:
@@ -161,14 +422,24 @@ class WordList:
         return self.word_list[word_id]["cost"]
 
 
-    def get_weaker_words(self, word_id: int) -> List[int]:
+    def get_stronger_words(self, word_id: int) -> List[int]:
         if word_id not in self.word_list:
             return None
-        return self.word_list[word_id][WEAKER_WORDS_STR]
+        return self.word_list[word_id][STRONGER_WORDS_STR]
+    
+
+    def print_what_beats_what(self):
+        for target_word_id in range(1, 61):
+            target_word: str = self.get_word_text(target_word_id)
+            print(f"\"{target_word}\" is weaker than: ", end='')
+            for weaker_word_id in self.word_list[target_word_id][STRONGER_WORDS_STR]:
+                weaker_word: str = self.get_word_text(weaker_word_id)
+                print(f"\"{weaker_word}\" ", end='')
+            print()
 
 
 
 if __name__ == '__main__':
     wordlist = WordList()
-    print(wordlist.get_weaker_words(1))
-    
+    print(wordlist.get_stronger_words(1))
+    wordlist.print_what_beats_what()
