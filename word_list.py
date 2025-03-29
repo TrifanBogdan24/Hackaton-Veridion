@@ -1,7 +1,73 @@
 import json
 from typing import Dict, Union, List
+from enum import Enum
 
 STRONGER_WORDS_STR = "stronger words"
+
+
+class Words(Enum):
+    """Constants for all allowed words"""
+    FEATHER = "Feather"
+    COAL = "Coal"
+    PEBBLE = "Pebble"  # Pietricele
+    LEAF = "Leaf"
+    PAPER = "Paper"
+    ROCK = "Rock"
+    WATER = "Water"
+    TWIG = "Twig"  # Ramura mica
+    SWORD = "Sword"
+    SHIELD = "Shield"
+    GUN = "Gun"
+    FLAME = "Flame"
+    ROPE = "Rope"
+    DISEASE = "Disease"
+    CURE = "Cure"
+    BACTERIA = "Bacteria"
+    SHADOW = "Shadow"
+    LIGHT = "Light"
+    VIRUS = "Virus"
+    SOUND = "Sound"
+    TIME = "Time"
+    FATE = "Fate"
+    EARTHQUAKE = "Earthquake"
+    STORM = "Storm"
+    VACCINE = "Vaccine"
+    LOGIC = "Logic"
+    GRAVITY = "Gravity"
+    ROBOTS = "Robots"
+    STONE = "Stone"
+    ECHO = "Echo"
+    THUNDER = "Thunder"
+    KARMA = "Karma"
+    WIND = "Wind"
+    ICE = "Ice"
+    SANDSTORM = "Sandstorm"
+    LASER = "Laser"
+    MAGMA = "Magma"
+    PEACE = "Peace"
+    EXPLOSION = "Explosion"
+    WAR = "War"
+    ENLIGHTENMENT = "Enlightenment"
+    NUCLEAR_BOMB = "Nuclear Bomb"
+    VOLCANO = "Volcano"
+    WHALE = "Whale"
+    EARTH = "Earth"
+    MOON = "Moon"
+    STAR = "Star"
+    TSUNAMI = "Tsunami"
+    SUPERNOVA = "Supernova"
+    ANTIMATTER = "Antimatter"
+    PLAGUE = "Plague"
+    REBIRTH = "Rebirth"
+    TECTONIC_SHIFT = "Tectonic Shift"
+    GAMMA_RAY_BURST = "Gamma-Ray Burst"
+    HUMAN_SPIRIT = "Human Spirit"
+    APOCALYPTIC_METEOR = "Apocalyptic Meteor"
+    EARTHS_CORE = "Earth’s Core"
+    NEUTRON_STAR = "Neutron Star"
+    SUPERMASSIVE_BLACK_HOLE = "Supermassive Black Hole"
+    ENTROPY = "Entropy"
+
 
 class WordList:
     """
@@ -81,7 +147,9 @@ class WordList:
             self.get_word_id("Rock"),
             self.get_word_id("Sword"),
             self.get_word_id("Gun"),
-            self.get_word_id("Flame")
+            self.get_word_id("Flame"),
+            self.get_word_id("Wind"),
+            self.get_word_id("Sandstorm")
         ]
         self.word_list[2][STRONGER_WORDS_STR]  = [
             # "Coal" is weaker than:

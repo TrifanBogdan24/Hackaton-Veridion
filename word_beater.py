@@ -5,7 +5,6 @@ from word_list import WordList
 class WordBeater():
     def __init__(self):
         self.word_list = WordList()
-        print(self.word_list.print_what_beats_what())
 
 
     def select_best_word(self, target_word: str) -> str:
