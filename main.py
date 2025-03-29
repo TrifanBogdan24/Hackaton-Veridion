@@ -11,7 +11,8 @@ post_url = f"{host}/submit-word"
 get_url = f"{host}/get-word"
 status_url = f"{host}/status"
 
-PLAYER_ID = 'team bogdan'
+# 7yfXV6LFbs
+PLAYER_ID = '7yfXV6LFbs'
 NUM_ROUNDS = 5
 
 
