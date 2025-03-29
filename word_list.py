@@ -76,69 +76,73 @@ class WordList:
         }
 
         # Hard-coded, it is what it is
-        self.word_list[1][WEAKER_WORDS_STR] = [1, 2, 3]
-        self.word_list[2][WEAKER_WORDS_STR] = [0]
-        self.word_list[3][WEAKER_WORDS_STR] = [0]
-        self.word_list[4][WEAKER_WORDS_STR] = [0]
-        self.word_list[5][WEAKER_WORDS_STR] = [0]
-        self.word_list[6][WEAKER_WORDS_STR] = [0]
-        self.word_list[7][WEAKER_WORDS_STR] = [0]
-        self.word_list[8][WEAKER_WORDS_STR] = [0]
-        self.word_list[9][WEAKER_WORDS_STR] = [0]
-        self.word_list[10][WEAKER_WORDS_STR] = [0]
-        self.word_list[11][WEAKER_WORDS_STR] = [0]
-        self.word_list[12][WEAKER_WORDS_STR] = [0]
-        self.word_list[13][WEAKER_WORDS_STR] = [0]
-        self.word_list[14][WEAKER_WORDS_STR] = [0]
-        self.word_list[15][WEAKER_WORDS_STR] = [0]
-        self.word_list[16][WEAKER_WORDS_STR] = [0]
-        self.word_list[17][WEAKER_WORDS_STR] = [0]
-        self.word_list[18][WEAKER_WORDS_STR] = [0]
-        self.word_list[19][WEAKER_WORDS_STR] = [0]
-        self.word_list[20][WEAKER_WORDS_STR] = [0]
-        self.word_list[21][WEAKER_WORDS_STR] = [0]
-        self.word_list[22][WEAKER_WORDS_STR] = [0]
-        self.word_list[23][WEAKER_WORDS_STR] = [0]
-        self.word_list[24][WEAKER_WORDS_STR] = [0]
-        self.word_list[25][WEAKER_WORDS_STR] = [0]
-        self.word_list[26][WEAKER_WORDS_STR] = [0]
-        self.word_list[27][WEAKER_WORDS_STR] = [0]
-        self.word_list[28][WEAKER_WORDS_STR] = [0]
-        self.word_list[29][WEAKER_WORDS_STR] = [0]
-        self.word_list[30][WEAKER_WORDS_STR] = [0]
-        self.word_list[31][WEAKER_WORDS_STR] = [0]
-        self.word_list[32][WEAKER_WORDS_STR] = [0]
-        self.word_list[33][WEAKER_WORDS_STR] = [0]
-        self.word_list[34][WEAKER_WORDS_STR] = [0]
-        self.word_list[35][WEAKER_WORDS_STR] = [0]
-        self.word_list[36][WEAKER_WORDS_STR] = [0]
-        self.word_list[37][WEAKER_WORDS_STR] = [0]
-        self.word_list[38][WEAKER_WORDS_STR] = [0]
-        self.word_list[39][WEAKER_WORDS_STR] = [0]
-        self.word_list[40][WEAKER_WORDS_STR] = [0]
-        self.word_list[41][WEAKER_WORDS_STR] = [0]
-        self.word_list[42][WEAKER_WORDS_STR] = [0]
-        self.word_list[43][WEAKER_WORDS_STR] = [0]
-        self.word_list[44][WEAKER_WORDS_STR] = [0]
-        self.word_list[45][WEAKER_WORDS_STR] = [0]
-        self.word_list[46][WEAKER_WORDS_STR] = [0]
-        self.word_list[47][WEAKER_WORDS_STR] = [0]
-        self.word_list[48][WEAKER_WORDS_STR] = [0]
-        self.word_list[49][WEAKER_WORDS_STR] = [0]
-        self.word_list[50][WEAKER_WORDS_STR] = [0]
-        self.word_list[51][WEAKER_WORDS_STR] = [0]
-        self.word_list[52][WEAKER_WORDS_STR] = [0]
-        self.word_list[53][WEAKER_WORDS_STR] = [0]
-        self.word_list[54][WEAKER_WORDS_STR] = [0]
-        self.word_list[55][WEAKER_WORDS_STR] = [0]
-        self.word_list[56][WEAKER_WORDS_STR] = [0]
-        self.word_list[57][WEAKER_WORDS_STR] = [0]
-        self.word_list[58][WEAKER_WORDS_STR] = [0]
-        self.word_list[59][WEAKER_WORDS_STR] = [0]
-        self.word_list[60][WEAKER_WORDS_STR] = [0]
+        self.word_list[1][WEAKER_WORDS_STR]  = [2, 3]  # Feather bate Coal și Pebble
+        self.word_list[2][WEAKER_WORDS_STR]  = [3]     # Coal bate Pebble
+        self.word_list[3][WEAKER_WORDS_STR]  = [4]     # Pebble bate Leaf
+        self.word_list[4][WEAKER_WORDS_STR]  = [5, 6]  # Leaf bate Paper și Rock
+        self.word_list[5][WEAKER_WORDS_STR]  = [6]     # Paper bate Rock
+        self.word_list[6][WEAKER_WORDS_STR]  = [7, 8]  # Rock bate Water și Twig
+        self.word_list[7][WEAKER_WORDS_STR]  = [8]     # Water bate Twig
+        self.word_list[8][WEAKER_WORDS_STR]  = [9, 10] # Twig bate Sword și Shield
+        self.word_list[9][WEAKER_WORDS_STR]  = [11]    # Sword bate Gun
+        self.word_list[10][WEAKER_WORDS_STR] = [11, 12] # Shield bate Gun și Flame
+        self.word_list[11][WEAKER_WORDS_STR] = [13]   # Gun bate Rope
+        self.word_list[12][WEAKER_WORDS_STR] = [13]   # Flame bate Rope
+        self.word_list[13][WEAKER_WORDS_STR] = [14]   # Rope bate Disease
+        self.word_list[14][WEAKER_WORDS_STR] = [15]   # Disease bate Cure
+        self.word_list[15][WEAKER_WORDS_STR] = [16]   # Cure bate Bacteria
+        self.word_list[16][WEAKER_WORDS_STR] = [17]   # Bacteria bate Shadow
+        self.word_list[17][WEAKER_WORDS_STR] = [18]   # Shadow bate Light
+        self.word_list[18][WEAKER_WORDS_STR] = [19]   # Light bate Virus
+        self.word_list[19][WEAKER_WORDS_STR] = [20]   # Virus bate Sound
+        self.word_list[20][WEAKER_WORDS_STR] = [21]   # Sound bate Time
+        self.word_list[21][WEAKER_WORDS_STR] = [22]   # Time bate Fate
+        self.word_list[22][WEAKER_WORDS_STR] = [23]   # Fate bate Earthquake
+        self.word_list[23][WEAKER_WORDS_STR] = [24]   # Earthquake bate Storm
+        self.word_list[24][WEAKER_WORDS_STR] = [25]   # Storm bate Vaccine
+        self.word_list[25][WEAKER_WORDS_STR] = [26]   # Vaccine bate Logic
+        self.word_list[26][WEAKER_WORDS_STR] = [27]   # Logic bate Gravity
+        self.word_list[27][WEAKER_WORDS_STR] = [28]   # Gravity bate Robots
+        self.word_list[28][WEAKER_WORDS_STR] = [29]   # Robots bate Stone
+        self.word_list[29][WEAKER_WORDS_STR] = [30]   # Stone bate Echo
+        self.word_list[30][WEAKER_WORDS_STR] = [31]   # Echo bate Thunder
+        self.word_list[31][WEAKER_WORDS_STR] = [32]   # Thunder bate Karma
+        self.word_list[32][WEAKER_WORDS_STR] = [33]   # Karma bate Wind
+        self.word_list[33][WEAKER_WORDS_STR] = [34]   # Wind bate Ice
+        self.word_list[34][WEAKER_WORDS_STR] = [35]   # Ice bate Sandstorm
+        self.word_list[35][WEAKER_WORDS_STR] = [36]   # Sandstorm bate Laser
+        self.word_list[36][WEAKER_WORDS_STR] = [37]   # Laser bate Magma
+        self.word_list[37][WEAKER_WORDS_STR] = [38]   # Magma bate Peace
+        self.word_list[38][WEAKER_WORDS_STR] = [39]   # Peace bate WAr
+        self.word_list[39][WEAKER_WORDS_STR] = [40]   # Explosion bate War
+        self.word_list[40][WEAKER_WORDS_STR] = [41]   # War bate Enlightenment
+        self.word_list[41][WEAKER_WORDS_STR] = [42]   # Enlightenment bate Nuclear Bomb
+        self.word_list[42][WEAKER_WORDS_STR] = [43]   # Nuclear Bomb bate Volcano
+        self.word_list[43][WEAKER_WORDS_STR] = [44]   # Volcano bate Whale
+        self.word_list[44][WEAKER_WORDS_STR] = [45]   # Whale bate Earth
+        self.word_list[45][WEAKER_WORDS_STR] = [46]   # Earth bate Moon
+        self.word_list[46][WEAKER_WORDS_STR] = [47]   # Moon bate Star
+        self.word_list[47][WEAKER_WORDS_STR] = [48]   # Star bate Tsunami
+        self.word_list[48][WEAKER_WORDS_STR] = [49]   # Tsunami bate Supernova
+        self.word_list[49][WEAKER_WORDS_STR] = [50]   # Supernova bate Antimatter
+        self.word_list[50][WEAKER_WORDS_STR] = [51]   # Antimatter bate Plague
+        self.word_list[51][WEAKER_WORDS_STR] = [52]   # Plague bate Rebirth
+        self.word_list[52][WEAKER_WORDS_STR] = [53]   # Rebirth bate Tectonic Shift
+        self.word_list[53][WEAKER_WORDS_STR] = [54]   # Tectonic Shift bate Gamma-Ray Burst
+        self.word_list[54][WEAKER_WORDS_STR] = [55]   # Gamma-Ray Burst bate Human Spirit
+        self.word_list[55][WEAKER_WORDS_STR] = [56]   # Human Spirit bate Apocalyptic Meteor
+        self.word_list[56][WEAKER_WORDS_STR] = [57]   # Apocalyptic Meteor bate Earth’s Core
+        self.word_list[57][WEAKER_WORDS_STR] = [58]   # Earth’s Core bate Neutron Star
+        self.word_list[58][WEAKER_WORDS_STR] = [59]   # Neutron Star bate Supermassive Black Hole
+        self.word_list[59][WEAKER_WORDS_STR] = [60]   # Supermassive Black Hole bate Entropy
+        self.word_list[60][WEAKER_WORDS_STR] = []     # Entropy nu bate niciun alt cuvânt
 
 
-
+    def get_word_id(self, word: str) -> int:
+        for word_id, word_data in self.word_list.items():
+            if word_data["text"].lower() == word.lower():
+                return word_id
+        return -1
         
 
     def get_word_data(self, word_id: int) -> Dict[str, Union[str, int]]:
@@ -167,3 +171,4 @@ class WordList:
 if __name__ == '__main__':
     wordlist = WordList()
     print(wordlist.get_weaker_words(1))
+    
